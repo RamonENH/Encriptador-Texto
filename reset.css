@@ -1,0 +1,151 @@
+/* ===================================================
+   CSS Reset de Meyerweb (v2.0 | 20110126)
+   License: Public Domain
+   URL: http://meyerweb.com/eric/tools/css/reset/
+   =================================================== */
+
+/* 
+   Este bloque selecciona una amplia gama de elementos HTML y les aplica
+   estilos básicos de reseteo para eliminar los estilos predeterminados 
+   que aplican los navegadores, garantizando una base consistente para 
+   el desarrollo posterior.
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;               /* Elimina los márgenes predeterminados */
+    padding: 0;              /* Elimina el padding predeterminado */
+    border: 0;               /* Elimina los bordes predeterminados */
+    font-size: 100%;         /* Establece el tamaño de fuente al 100% del contenedor padre */
+    font: inherit;           /* Hereda la fuente del elemento padre */
+    vertical-align: baseline;/* Establece la alineación vertical al nivel base */
+}
+
+/* 
+   Este bloque asegura que los elementos HTML5 tengan un comportamiento 
+   consistente en navegadores más antiguos que no reconocen estos elementos 
+   como bloques por defecto.
+*/
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block; /* Fuerza a estos elementos a comportarse como bloques */
+}
+
+/* 
+   Establece una altura de línea consistente para el cuerpo del documento.
+*/
+body {
+    line-height: 1; /* Elimina el espacio extra entre líneas */
+}
+
+/* 
+   Elimina los estilos de lista predeterminados (como los puntos o números).
+*/
+ol, ul {
+    list-style: none; /* Quita los estilos de lista */
+}
+
+/* 
+   Elimina las comillas predeterminadas de los elementos <blockquote> y <q>.
+*/
+blockquote, q {
+    quotes: none; /* Quita las comillas predeterminadas */
+}
+
+/* 
+   Asegura que no se muestren comillas antes y después de <blockquote> y <q>.
+*/
+blockquote::before, blockquote::after,
+q::before, q::after {
+    content: '';      /* No muestra contenido antes y después */
+    content: none;    /* Asegura que no haya contenido adicional */
+}
+
+/* 
+   Ajusta las tablas para que no tengan espacios entre celdas y bordes colapsados.
+*/
+table {
+    border-collapse: collapse; /* Colapsa los bordes de la tabla */
+    border-spacing: 0;         /* Elimina el espacio entre celdas */
+}
+
+/* ===================================================
+   Mejoras Modernas para una Mayor Consistencia
+   =================================================== */
+
+/* 
+   Añade un modelo de caja más intuitivo para todos los elementos, 
+   donde el padding y el borde se incluyen dentro del ancho y alto 
+   del elemento. Esto facilita el diseño responsivo y evita 
+   cálculos inesperados de tamaño.
+*/
+*, *::before, *::after {
+    box-sizing: border-box; /* Incluye padding y borde dentro del tamaño total */
+}
+
+/* 
+   Configura el tamaño de la fuente base y establece una fuente predeterminada 
+   para todo el documento, mejorando la consistencia tipográfica.
+*/
+html {
+    font-size: 16px; /* Define el tamaño base de la fuente */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Establece una fuente predeterminada */
+    line-height: 1.5;              /* Mejora la legibilidad con una altura de línea más cómoda */
+    background-color: #f9f9f9;      /* Establece un color de fondo suave */
+    color: #333;                    /* Define un color de texto legible */
+}
+
+/* 
+   Elimina el subrayado de los enlaces y establece un color predeterminado, 
+   además de asegurarse de que los enlaces hereden el color del texto si no se define uno específico.
+*/
+a {
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    color: inherit;        /* Hace que los enlaces hereden el color del texto */
+}
+
+/* 
+   Asegura que las imágenes y otros medios se escalen correctamente y no excedan el contenedor.
+*/
+img, video, canvas, svg {
+    max-width: 100%; /* Evita que los elementos excedan el ancho de su contenedor */
+    height: auto;    /* Mantiene la proporción original */
+}
+
+/* 
+   Establece una transición suave para interacciones básicas, mejorando la experiencia de usuario.
+*/
+button, input, textarea, select {
+    font: inherit; /* Asegura que los controles de formulario hereden la fuente del documento */
+}
+
+/* 
+   Elimina el estilo predeterminado del botón para permitir una personalización completa.
+*/
+button {
+    background: none;       /* Quita el fondo predeterminado */
+    border: none;           /* Quita el borde predeterminado */
+    cursor: pointer;        /* Cambia el cursor al pasar sobre el botón */
+}
+
+/* 
+   Establece un estilo consistente para enlaces y botones al enfocarlos, 
+   mejorando la accesibilidad.
+*/
+a:focus, button:focus, input:focus, textarea:focus, select:focus {
+    outline: 2px solid #005fcc; /* Añade un contorno visible al enfocar */
+    outline-offset: 2px;        /* Añade un pequeño espacio entre el contorno y el elemento */
+}

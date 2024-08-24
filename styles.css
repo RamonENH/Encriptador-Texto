@@ -1,0 +1,376 @@
+/* General Resets and Global Styles */
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin-top: 7vh;
+    background-color: #f3f5fc;
+}
+
+/* Logo Container */
+#logo {
+    margin: 2vw 0 0 0.7vw;
+    max-width: 85vw;
+    max-height: 85vw;
+}
+
+#logo img {
+    max-width: 12%;
+    height: 3rem;
+}
+
+/* Main Container */
+.contenedor {
+    display: flex;
+   
+    background-color: #f3f5fc;
+    margin: 5vw auto;
+    width: 100%;
+    text-align: center;
+    padding: 0; /* Removed unnecessary auto padding */
+}
+
+/* Left Side Container */
+.izquierda {
+    background-color: transparent;
+    width: 50vw;
+    margin: 0 0.5vw 0.5vw 0;
+    padding: 0 1vw;
+    height: auto; /* Default behavior */
+}
+
+/* Textarea for Input Text */
+#texto-encriptar {
+    border: none;
+    background-color: #f3f5fc;
+    width: 90%;
+    min-height: 10vh;
+    max-height: 50vh;
+    margin: 1vw 1vw 1vw 4vw;
+    color: #0a3871;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 48px;
+    text-align: left;
+}
+
+::placeholder {
+    color: rgba(10, 56, 113, 0.6);
+    font-size: 32px;
+}
+
+/* Validation Message */
+#mensaje-validación {
+    color: #868e96;
+    margin: 0.5vw 0.5vw 0.5vw -6vw;
+    padding: 2vw 1vw 0;
+    font-size: 0.9vw;
+}
+
+/* Encrypt Button */
+#btn-encriptar {
+    color: white;
+    border: none;
+    background-color: #0a3871;
+    border-radius: 15px;
+    margin-left: 10vw;
+    padding: 1vw;
+    width: 28%;
+    font-size: 1vw;
+    cursor: pointer;
+    height: auto; /* Default behavior */
+}
+
+/* Decrypt Button */
+#btn-desencriptar {
+    color: #0a3871;
+    border: 0.1vw solid #0a3871;
+    background-color: #D8DFE8;
+    border-radius: 15px;
+    margin-left: 3vw;
+    margin-right: 4vw;
+    padding: 1vw;
+    width: 28%;
+    font-size: 1vw;
+    cursor: pointer;
+    height: auto; /* Default behavior */
+}
+
+/* Right Side Container */
+.derecha {
+    position: relative;
+    background-color: rgb(249, 250, 249);
+    width: 30%;
+    margin: auto;
+    padding: 2vw 1vw 1vw;
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+    height: 60vh; /* Default behavior */
+}
+
+/* Hidden Content */
+.oculto {
+    display: none;
+}
+
+/* Encrypted Text Output */
+#texto-encriptado {
+    border: none;
+    width: 85%;
+    min-height: 8vh;
+    max-height: 60vh;
+    margin: 1vw 1vw 1vw 1.7vw;
+    color: #0a3871;
+    font-size: 1.8vw;
+    field-sizing: content;
+}
+
+/* Placeholder Image */
+.desenc-inicio img {
+    width: 85%;
+    margin: 5vw 1vw 0 1.7vw;
+    height: auto; /* Default behavior */
+}
+
+/* Heading Style */
+h2 {
+    color: #0a3871;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    text-align: center;
+    margin: 1vw;
+    padding: 1vw;
+}
+
+/* Paragraph Style */
+.desenc-inicio p {
+    color: #0a3871;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    margin: 0 1vw 2vw;
+    padding: 1vw;
+}
+
+/* Copy Button */
+#btn-copiar {
+    position: absolute;
+    bottom: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #0a3871;
+    border: 0.1vw solid #0a3871;
+    background-color: white;
+    border-radius: 15px;
+    padding: 1vw;
+    width: 40%;
+    font-size: 1vw;
+    margin-top: 1.5vw;
+    height: auto; /* Default behavior */
+}
+
+/* Custom Alert */
+#custom-alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(10, 56, 113, 0.9);
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: #0a3871;
+    color: white;
+    margin: 3vw 0 0;
+    padding: 2vw;
+    text-align: center;
+    height: auto; /* Default behavior */
+}
+
+footer p {
+    margin-bottom: 2vw;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Small Screens (Phones) */
+@media (max-width: 768px) {
+    body {
+        margin-top: 2vh;
+    }
+
+    #logo img {
+        max-width: 25%;
+        margin: 4vw;
+    }
+
+    .contenedor {
+        display: block;
+        padding-bottom: 5vw;
+    }
+
+    .izquierda {
+        width: 100%;
+        text-align: center;
+        margin: 0 0 0 2vw;
+    }
+
+    #texto-encriptar {
+        width: 90%;
+        min-height: 35vw;
+        margin: 0 auto;
+        font-size: 32px;
+    }
+
+    #mensaje-validación {
+        font-size: 12px;
+        margin: 1vw 1vw 1vw 15vw;
+    }
+
+    #btn-encriptar, #btn-desencriptar {
+        width: 70%;
+        font-size: 16px;
+        margin: 1vw 1vw 2vw -2vw;
+        padding: 3vw;
+    }
+
+    .derecha {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        padding: 2vh 1vh 2vh;
+    }
+
+    #texto-encriptado {
+        width: 90%;
+        margin: 2vw 2vw 10vw;
+        font-size: 24px;
+    }
+
+    #btn-copiar {
+        width: 70%;
+        font-size: 16px;
+        margin: 15px 4px 4px;
+        padding: 3vw;
+        bottom: 5px;
+    }
+
+    .desenc-inicio img {
+        display: none;
+    }
+}
+
+/* Landscape Orientation for Phones */
+@media (max-width: 768px) and (orientation: landscape) {
+    .derecha {
+        display: block;
+        width: 100%;
+        margin: 1vw;
+        padding: 5vh 1vh 8vh;
+    }
+
+    #texto-encriptado {
+        width: 90%;
+        margin: 2vw 2vw 10vw;
+        font-size: 3.9vw;
+    }
+
+    #btn-copiar {
+        width: 40%;
+        font-size: 3.5vw;
+        margin: 5vw 2vw 2vw 0;
+        padding: 2vw;
+    }
+}
+
+/* Tablets in Portrait Orientation */
+@media only screen and (min-width: 600px) and (max-width: 1024px) and (orientation: portrait) {
+    #logo img {
+        max-width: 80%;
+    }
+
+    .contenedor {
+        display: block;
+        text-align: center;
+    }
+
+    .izquierda {
+        width: 100%;
+        text-align: center;
+        margin: 1vh auto;
+    }
+
+    #texto-encriptar {
+        width: 90%;
+        min-height: 50vw;
+        margin: 0;
+        font-size: 32px;
+    }
+
+    #mensaje-validación {
+        font-size: 12px;
+        margin: 1vw 1vw 1vw 6vw;
+    }
+
+    #btn-encriptar, #btn-desencriptar {
+        width: 28vh;
+        font-size: 16px;
+        padding: 2.5vw;
+    }
+
+    .derecha {
+        display: block;
+        width: 100%;
+        margin: 2vh 0 4vh 0;
+        padding: 2vh 0 5vh;
+    }
+
+    #texto-encriptado {
+        width: 90%;
+        margin: 1vw 1vw 10vw;
+        font-size: 24px;
+    }
+
+    #btn-copiar {
+        width: 70%;
+        font-size: 16px;
+        margin: 15px 4px 4px;
+        padding: 3vw;
+        bottom: 5px;
+    }
+
+    .desenc-inicio img {
+        display: none;
+    }
+}
+
+/* Large Desktops or Wide Screens */
+@media (min-width: 1200px) {
+    .derecha {
+        padding: 2vw 1vw 1vw;
+    }
+
+    #btn-copiar {
+        padding: 1vw;
+        font-size: 1vw;
+    }
+
+    footer p {
+        margin-bottom: 1vw;
+    }
+}

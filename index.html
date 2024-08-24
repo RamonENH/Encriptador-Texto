@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Encriptación de Texto</title>
+        <!-- Reset CSS para asegurar consistencia en estilos básicos entre navegadores -->
+        <link rel="stylesheet" href="reset.css">
+        <!-- Archivo de estilos principal -->
+        <link rel="stylesheet" href="styles.css">
+        <!-- Preconexión para mejorar el rendimiento en la carga de fuentes -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- Fuentes personalizadas para usar en el proyecto -->
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,700&family=Fraunces:opsz,wght@9..144,500&family=Inter:wght@100..900&family=Roboto+Slab&family=Spectral:ital,wght@1,600;1,800&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Encabezado del sitio -->
+        <header>
+            <div id="logo">
+                <!-- Logo de la página -->
+                <img src="Logo.png" alt="Logo">
+            </div>          
+        </header>
+
+        <!-- Contenido principal de la página -->
+        <main>
+            <div class="contenedor">
+                <!-- Sección izquierda donde se ingresa el texto -->
+                <div class="izquierda">
+                    <!-- Área de texto para ingresar el mensaje a encriptar o desencriptar -->
+                    <textarea id="texto-encriptar" name="texto-encriptar" placeholder="Ingrese texto aquí" rows="20" cols="50" style="outline: none" autofocus></textarea>
+                    <!-- Mensaje de validación de entrada -->
+                    <p id="mensaje-validacion">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
+                        </svg> 
+                        Solo letras minúsculas y sin acentos
+                    </p>  
+                    <!-- Botones para encriptar y desencriptar el texto -->
+                    <button id="btn-encriptar" onclick="btnEncriptar()">Encriptar!</button>
+                    <button id="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>  
+                </div>
+
+                <!-- Sección derecha donde se muestra el resultado -->
+                <div class="derecha">
+                    <div class="desenc-inicio">
+                        <!-- Área de texto para mostrar el resultado de la encriptación/desencriptación -->
+                        <textarea id="texto-encriptado" name="texto-encriptado" rows="1" cols="50" style="outline: none" class="oculto" readonly></textarea>
+                        <!-- Imagen y mensajes por defecto cuando no hay resultado aún -->
+                        <img id="imgmuneco" src="Muñeco.png" alt="Muñeco">
+                        <h2 id="mensaje">Ningún mensaje fue encontrado</h2>
+                        <p id="text-derecha">Ingresa el texto que deseas encriptar o desencriptar</p>
+                        <!-- Botón para copiar el texto encriptado/desencriptado al portapapeles -->
+                        <button id="btn-copiar" onclick="copyText()" class="oculto">Copiar</button>                        
+                    </div>
+                </div>
+
+                <!-- Alerta personalizada para confirmar la acción de copiar -->
+                <div id="custom-alert" class="oculto">
+                    <p>¡Texto copiado exitosamente!</p>
+                </div>                  
+            </div>
+        </main>
+
+        <!-- Archivo de script para la lógica de encriptación/desencriptación -->
+        <script src="script.js"></script>
+    </body>
+</html>
